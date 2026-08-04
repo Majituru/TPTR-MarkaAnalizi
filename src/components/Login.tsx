@@ -29,7 +29,7 @@ export default function Login() {
         <div className="p-8">
           <div className="text-center mb-8">
             <h1 className="text-white font-bold text-3xl tracking-tight uppercase mb-2">
-              TP-Link <span className="text-blue-400 font-normal">Marka Analizi</span>
+              TP-Link <span className="text-blue-400 font-normal">BRAND</span>SCAN
             </h1>
             <p className="text-slate-400 text-xs uppercase tracking-widest">
               Agency Share Portal

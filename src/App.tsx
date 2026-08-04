@@ -125,7 +125,7 @@ export default function App() {
       )}>
         <div className="p-6 border-b border-slate-800 flex justify-between items-start">
           <div>
-            <h1 className="text-white font-bold text-xl tracking-tight uppercase">TP-Link <span className="text-blue-400 font-normal">Marka Analizi</span></h1>
+            <h1 className="text-white font-bold text-xl tracking-tight uppercase">TP-Link <span className="text-blue-400 font-normal">BRAND</span>SCAN</h1>
             <p className="text-slate-400 text-[10px] mt-1 uppercase tracking-widest">Agency Share Portal</p>
           </div>
           <button className="lg:hidden text-slate-400 hover:text-white" onClick={() => setMobileMenuOpen(false)}>
