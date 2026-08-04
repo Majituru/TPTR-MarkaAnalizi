@@ -52,7 +52,11 @@ const overviewData: BrandData = {
         shippedUnits: item.shippedUnits + brandData['Tapo'].amazon.timeSeries.weeklyReturns[i].shippedUnits,
         returns: item.returns + brandData['Tapo'].amazon.timeSeries.weeklyReturns[i].returns,
       })),
-    }
+    },
+    marketBasket: [
+      ...(brandData['TP-Link'].amazon.marketBasket || []),
+      ...(brandData['Tapo'].amazon.marketBasket || [])
+    ]
   },
   website: {
     totalVisitors: brandData['TP-Link'].website.totalVisitors + brandData['Tapo'].website.totalVisitors,

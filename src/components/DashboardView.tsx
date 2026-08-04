@@ -369,6 +369,36 @@ export default function DashboardView({ data, brandColor, brandName }: Props) {
             </div>
 
           </div>
+
+          {/* Market Basket Analysis Section */}
+          {data.amazon.marketBasket && data.amazon.marketBasket.length > 0 && (
+            <div className="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+              <div className="flex items-center gap-2 mb-4">
+                <ShoppingCart className="w-4 h-4 text-slate-400" />
+                <h3 className="text-xs font-bold uppercase text-slate-500 tracking-wider">Market Basket Analysis (Top Products)</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {data.amazon.marketBasket.slice(0, 6).map((item, index) => (
+                  <div key={index} className="border border-slate-100 rounded-lg p-4 bg-slate-50/50 flex flex-col">
+                    <h4 className="text-xs font-bold text-slate-800 line-clamp-2 mb-3" title={item.productName}>{item.productName}</h4>
+                    <div className="flex flex-col gap-3 flex-1">
+                      {item.combinations.map((combo, idx) => (
+                        <div key={idx} className="flex flex-col gap-1.5">
+                          <div className="flex justify-between items-start gap-2">
+                            <span className="text-[10px] text-slate-600 font-medium line-clamp-2 flex-1" title={combo.name}>{idx + 1}. {combo.name}</span>
+                            <span className="text-[10px] font-bold" style={{color: brandColor}}>{combo.percentage}%</span>
+                          </div>
+                          <div className="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden shrink-0">
+                            <div className="h-full rounded-full" style={{ width: `${combo.percentage}%`, backgroundColor: brandColor }}></div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>

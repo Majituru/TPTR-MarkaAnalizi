@@ -49,6 +49,16 @@ export interface AmazonTimeSeries {
   weeklyReturns: WeeklyReturns[];
 }
 
+export interface MarketBasketCombination {
+  name: string;
+  percentage: number;
+}
+
+export interface MarketBasketProduct {
+  productName: string;
+  combinations: MarketBasketCombination[];
+}
+
 export interface AmazonData {
   totalUnits: number;
   glanceViews: number;
@@ -59,6 +69,7 @@ export interface AmazonData {
   funnel: AmazonFunnel;
   topStates: AmazonState[];
   timeSeries: AmazonTimeSeries;
+  marketBasket?: MarketBasketProduct[];
 }
 
 export interface WebsiteTrafficHour {

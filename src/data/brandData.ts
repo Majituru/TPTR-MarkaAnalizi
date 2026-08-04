@@ -286,7 +286,49 @@ export const brandData = {
             "returns": 2
           }
         ]
-      }
+      },
+      "marketBasket": [
+        {
+          "productName": "TP-Link Tapo C216 | İç ve Dış Mekan Wi-Fi Güvenlik Kamerası",
+          "combinations": [
+            { "name": "JBL Tune 510BT Multi Connect Wireless Kulaklık, Siyah", "percentage": 100.0 },
+            { "name": "Okey Kayganlaştırıcı Jel - Çilek Özlü 100 ml", "percentage": 100.0 },
+            { "name": "Juo Magsafe Powerbank 10000mAh", "percentage": 100.0 }
+          ]
+        },
+        {
+          "productName": "TP-Link UB600 Nano | Bluetooth 6.0 USB Adaptör",
+          "combinations": [
+            { "name": "Sailor Moon Eternal Edition 9", "percentage": 25.0 },
+            { "name": "Sailor Moon Eternal Edition 10", "percentage": 25.0 },
+            { "name": "VegGieg Premium 8K 60Hz 4K 120Hz HDMI 2.1 Kablo 1.5 Metre", "percentage": 25.0 }
+          ]
+        },
+        {
+          "productName": "TP-Link Tapo C645D KIT Güneş Enerjili Çift Lensli Pan/Tilt Güvenlik Kamerası",
+          "combinations": [
+            { "name": "SanDisk Extreme PRO SDXC UHS-I Hafıza Kartı, 128 GB", "percentage": 33.33 },
+            { "name": "Tapo C545D | 2K Çift Lensli Dış Mekan Güvenlik Kamerası", "percentage": 33.33 },
+            { "name": "KIOXIA 128GB Exceria G3 Micro SDXC Hafıza Kartı", "percentage": 33.33 }
+          ]
+        },
+        {
+          "productName": "TP-Link Deco X50(3-pack), AX3000 Tüm Ev Mesh WiFi 6 Sistemi",
+          "combinations": [
+            { "name": "VegGieg CAT6 1000Mbps Gigabit UTP Ethernet Kablosu 1 Metre", "percentage": 23.53 },
+            { "name": "TP-Link Deco X50(1-pack), AX3000 Tüm Ev Mesh WiFi 6 Sistemi", "percentage": 11.76 },
+            { "name": "Vileda Ekonomik Bulaşık Süngeri, 10'lu Ekonomik Paket", "percentage": 5.88 }
+          ]
+        },
+        {
+          "productName": "TP-Link Deco X50-Outdoor 1-Pack, AX3000 Mbps",
+          "combinations": [
+            { "name": "TP-Link Deco X50(1-pack), AX3000 Tüm Ev Mesh WiFi 6 Sistemi", "percentage": 25.0 },
+            { "name": "TP-Link Deco X50-PoE 1-pack, AX3000 Mbps", "percentage": 25.0 },
+            { "name": "Ugreen CAT6 Flat Ethernet Kablosu, 2 Metre, Siyah", "percentage": 12.5 }
+          ]
+        }
+      ]
     },
     "website": {
       "totalVisitors": 118803,
@@ -754,7 +796,25 @@ export const brandData = {
             "returns": 1
           }
         ]
-      }
+      },
+      "marketBasket": [
+        {
+          "productName": "Tapo P100, Akıllı Mini Wi-Fi Soketi",
+          "combinations": [
+            { "name": "Tapo C200, 1080P Full HD, Hareket Tespit", "percentage": 25.0 },
+            { "name": "Varta Longlife AA Alkalin kalem pil 10'lu", "percentage": 15.5 },
+            { "name": "SanDisk Extreme PRO SDXC UHS-I Hafıza Kartı", "percentage": 10.2 }
+          ]
+        },
+        {
+          "productName": "Tapo C200, 1080P Full HD, Hareket Tespiti",
+          "combinations": [
+            { "name": "KIOXIA 128GB Exceria G3 Micro SDXC Hafıza Kartı", "percentage": 45.0 },
+            { "name": "SanDisk Extreme PRO SDXC UHS-I Hafıza Kartı, 128 GB", "percentage": 30.0 },
+            { "name": "Kingston Canvas Select Plus microSD", "percentage": 15.0 }
+          ]
+        }
+      ]
     },
     "website": {
       "totalVisitors": 19052,
