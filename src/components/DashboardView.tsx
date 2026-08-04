@@ -378,7 +378,7 @@ export default function DashboardView({ data, brandColor, brandName }: Props) {
                 <h3 className="text-xs font-bold uppercase text-slate-500 tracking-wider">Market Basket Analysis (Top Products)</h3>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {data.amazon.marketBasket.slice(0, 6).map((item, index) => (
+                {data.amazon.marketBasket.slice(0, 20).map((item, index) => (
                   <div key={index} className="border border-slate-100 rounded-lg p-4 bg-slate-50/50 flex flex-col">
                     <h4 className="text-xs font-bold text-slate-800 line-clamp-2 mb-3" title={item.productName}>{item.productName}</h4>
                     <div className="flex flex-col gap-3 flex-1">

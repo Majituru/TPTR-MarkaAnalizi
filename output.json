@@ -1,0 +1,345 @@
+=== TP-LINK ===
+[
+  {
+    "productName": "TP-Link UB500, Bluetooth 5.4, (PC dizüstü bilgisayar masaüstü bilgisayar için, Windows 10/8.1/8/7 Plug & Play destekler), Nano USB Bluetooth Adaptör",
+    "combinations": [
+      {
+        "name": "NIVEA SUN SPF50+Yüksek Güneş Koruyucu 200 ml,Suya Dayanıklı,Nemlendirici,C Vitamini,Hyalüron",
+        "percentage": 2.07
+      },
+      {
+        "name": "Ugreen CAT6 Flat Ethernet Kablosu, 10 Metre",
+        "percentage": 2.07
+      },
+      {
+        "name": "Kablosuz Wifi Alıcı AC1300 Mbps Dual Band USB 3.0 Adaptör",
+        "percentage": 2.07
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link UH400, 5Gbps Transfer Hızlı Tak ve kullan 4-Port USB 3.0 Hub",
+    "combinations": [
+      {
+        "name": "Viko Yonca Plus Beyaz Üçlü Topraklı Priz Çarpma Karşıtı",
+        "percentage": 3.13
+      },
+      {
+        "name": "TP-Link Archer TX50UH, AX3000Mbps USB Adaptörü, Wi-Fi 6, USB 3.0, Çift Bantlı, WPA3, Beamforming, MU-MIMO",
+        "percentage": 3.13
+      },
+      {
+        "name": "Logitech M171 Kablosuz Mouse, PC, Mac, Dizüstü Bilgisayar için, 2,4 GHz, USB Mini Alıcılı, Optik İzleme, 12 Aylık Pil Ömrü, Sağ ve Sol Elle Kullanıma Uygun, Siyah",
+        "percentage": 2.08
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link TL-SG105, 5-Port 10/100/1000Mbps Gigabit Siwtch",
+    "combinations": [
+      {
+        "name": "VegGieg CAT6 1000Mbps Gigabit UTP Ethernet Kablosu 2 Metre",
+        "percentage": 10.77
+      },
+      {
+        "name": "KabelDirekt – Ethernet Kablosu, Ağ Kablosu, LAN – 1,5m – 0,25-30m arasında mevcuttur (10Gbps, Gigabit Ağlar için Fiber Hızı, RJ45 ile Switch/Router/Modem, siyah/mavi)",
+        "percentage": 9.23
+      },
+      {
+        "name": "VegGieg CAT6 1000Mbps Gigabit UTP Ethernet Kablosu 1 Metre",
+        "percentage": 7.69
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link UB500 Plus, Ayarlanabilir Harici Antenli, Yüksek Çekim Güçlü Bluetooth 5.4 USB Adaptör",
+    "combinations": [
+      {
+        "name": "JBL C100SI, Kulaklık, CT, IE, Siyah",
+        "percentage": 5.17
+      },
+      {
+        "name": "Aula N-108 1+1 USB/Aux Stereo 2.0 RGB Masaüstü Gaming Oyuncu Hoparlör Speaker Ses Sistemi",
+        "percentage": 3.45
+      },
+      {
+        "name": "Barbie Sporcu Bebekler, üniforması ve topuyla Barbie Voleybolcu Bebek ile aksesuarları, HKT72",
+        "percentage": 3.45
+      }
+    ]
+  },
+  {
+    "productName": "Mercusys MA530, Bluetooth 5.3, Nano USB Adaptör",
+    "combinations": [
+      {
+        "name": "Mercusys MA32H, AC1300 Mbps, Çift Bant, USB 3.0, Yüksek Çekim Güçlü Wi-Fi 5 USB Adaptör",
+        "percentage": 11.76
+      },
+      {
+        "name": "Pi&Go Oral B Şarjlı Diş Fırçası Uyumlu Yedek Başlık - Elektrikli Diş Fırçası Yedek Başlığı, 4 Adet",
+        "percentage": 3.92
+      },
+      {
+        "name": "Viko Yonca Plus Beyaz Üçlü Topraklı Priz Çarpma Karşıtı",
+        "percentage": 3.92
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link UE300, USB 3.0 RJ45 Gigabit Ethernet Network Çevirici",
+    "combinations": [
+      {
+        "name": "VegGieg CAT6 1000Mbps Gigabit UTP Ethernet Kablosu 1 Metre",
+        "percentage": 8.89
+      },
+      {
+        "name": "VegGieg CAT6 1000Mbps Gigabit UTP Ethernet Kablosu 5 Metre",
+        "percentage": 6.67
+      },
+      {
+        "name": "VegGieg CAT6 1000Mbps Gigabit UTP Ethernet Kablosu 2 Metre",
+        "percentage": 6.67
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link LS1005G Ethernet Çevirici 5 Port 10/100/1000 Mbps",
+    "combinations": [
+      {
+        "name": "VegGieg CAT6 1000Mbps Gigabit UTP Ethernet Kablosu 2 Metre",
+        "percentage": 11.36
+      },
+      {
+        "name": "VegGieg CAT6 1000Mbps Gigabit UTP Ethernet Kablosu 1 Metre",
+        "percentage": 9.09
+      },
+      {
+        "name": "Ugreen Cat6 Flat Pure Copper Metal Konnektör UTP Ethernet Kablosu 3 Metre",
+        "percentage": 6.82
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link UA430C; USB 3.0 Type-C ile SD & microSD 3.0 Kart Okuyucu",
+    "combinations": [
+      {
+        "name": "KIOXIA EXCERIA 64GB microSDXC Kart – UHS-I, R100MB/s okuma",
+        "percentage": 5
+      },
+      {
+        "name": "SanDisk Ultra 32GB SDHC Memory Card 120MB/s",
+        "percentage": 5
+      },
+      {
+        "name": "SanDisk Ultra 32 GB microSDHC 120 MB/s A1 Class 10 UHS-I",
+        "percentage": 5
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link TL-WA850RE, N300 Mbps Wi-Fi Menzil Genişletici, 1 Ethernet Bağlantı Noktalı Wi-Fi Güçlendirici/Hotspot, Access Point Modu, Tüm Wi-Fi Yönlendiriciler ile Çalışır",
+    "combinations": [
+      {
+        "name": "Viko Yonca Plus Gri Üçlü Topraklı Priz Çarpma Karşıtı",
+        "percentage": 5.56
+      },
+      {
+        "name": "VegGieg CAT6 1000Mbps Gigabit UTP Ethernet Kablosu 1 Metre",
+        "percentage": 5.56
+      },
+      {
+        "name": "Alevileş(tiril)miş Ermeniler",
+        "percentage": 2.78
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link Archer BE230, BE3600 Mbps, Fiber Destekli, 2× 2.5 Gbps WAN/LAN Port + 3× Gbps Port, VPN Destekli, HomeSheild, Easy Mesh Uyumlu, Dual-Band Wi-Fi 7 Router",
+    "combinations": [
+      {
+        "name": "Adem’den Önceki Yaşam",
+        "percentage": 2.86
+      },
+      {
+        "name": "TP-Link TL-SG1016DE, 16-Port Gigabit Easy Smart Switch",
+        "percentage": 2.86
+      },
+      {
+        "name": "Logitech K270 Kablosuz Klavye, Tuş Takımı, Sıvı Dökülmesine Dayanıklı, 10 m Kullanım Mesafesi, Türkçe Q Klavye, Siyah",
+        "percentage": 2.86
+      }
+    ]
+  },
+  {
+    "productName": "Kablosuz Wifi Alıcı AC1300 Mbps Dual Band USB 3.0 Adaptör",
+    "combinations": [
+      {
+        "name": "TP-Link UB500, Bluetooth 5.4, (PC dizüstü bilgisayar masaüstü bilgisayar için, Windows 10/8.1/8/7 Plug & Play destekler), Nano USB Bluetooth Adaptör",
+        "percentage": 9.09
+      },
+      {
+        "name": "TP-Link Archer T3U, AC1300 Mini Wireless MU-MIMO USB Adaptör",
+        "percentage": 6.06
+      },
+      {
+        "name": "Viko Multi-Let 5li Topraklı Kablolu Ç.K 5mt Siyah Priz",
+        "percentage": 6.06
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link Archer AX12, AX1500 Wi-Fi 6 Gigabit Portlu Kablosuz Router, Fiber Destekli, 4 Gigabit LAN Portları, WPA3, Oyun için İdeal Xbox/PS4/Steam ve 4K",
+    "combinations": [
+      {
+        "name": "VegGieg CAT6 1000Mbps Gigabit UTP Ethernet Kablosu 5 Metre",
+        "percentage": 9.38
+      },
+      {
+        "name": "Solaris (SL10)",
+        "percentage": 6.25
+      },
+      {
+        "name": "TP-Link Archer VR400, AC1200 Mbps Kablosuz Dual-Band MU-MIMO Fiber Destekli VDSL/ADSL Modem Router, 4 Gigabit LAN Portları + 1 USB 2.0 Port, Beamforming, Tether Uygulaması ile Kolay Kurulum",
+        "percentage": 6.25
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link UH6120C, 1 HDMI, 1 100W Hızlı Şarj Portu, 1 USB-C, 2 USB-A 3.0 Port ve Type C den Gigabit Ethernet Dönüştürücü",
+    "combinations": [
+      {
+        "name": "Viko Multi-Let Üçlü Priz Anahtarlı Topraklı Kablolu Çocuk Korumalı 5 Mt",
+        "percentage": 6.25
+      },
+      {
+        "name": "Logitech, Mx Keys Mini Minimalist Kablosuz Aydınlatmalı Klavye, Kompakt, Bluetooth, Performans, Çoklu Cihaz Özellikli, 5 Ay Pil Ömrü, Türkçe Q Klavye, 920-010504, Siyah",
+        "percentage": 6.25
+      },
+      {
+        "name": "Logitech MX Master 3S Bluetooth Edition Performans Kablosuz Mouse, 8.000 DPI, Sessiz, Ergonomik, Ultra Hızlı Kaydırma, Çoklu Cihaz Özelliği, Bluetooth, Logi Bolt USB Alıcı, Siyah",
+        "percentage": 6.25
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link UE306, USB 3.0 - Gigabit Ethernet Ağ Adaptörü",
+    "combinations": [
+      {
+        "name": "TP-Link UH400, 5Gbps Transfer Hızlı Tak ve kullan 4-Port USB 3.0 Hub",
+        "percentage": 6.45
+      },
+      {
+        "name": "TP-Link UE300, USB 3.0 RJ45 Gigabit Ethernet Network Çevirici",
+        "percentage": 6.45
+      },
+      {
+        "name": "Ugreen Cat6A Slim 10 Gbps Ethernet Kablosu 3 Metre",
+        "percentage": 6.45
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link UE300C, USB Type-C to RJ45 Gigabit Ethernet Network Adapter",
+    "combinations": [
+      {
+        "name": "Ugreen CAT7 U/FTP Flat Ethernet Kablosu 5 Metre",
+        "percentage": 7.14
+      },
+      {
+        "name": "Gündelik Hayatımızın Tarihi (Ciltli)",
+        "percentage": 3.57
+      },
+      {
+        "name": "Gelibolu’da Bir Yıl: Fotoğraflar, Kartpostallar ve Propaganda Kartlarında Çanakkale Muharebeleri",
+        "percentage": 3.57
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link Deco E4 1-Pack , AC1200 Mbps, Dual-Band, 10/100Mbps Portları, 100 Cihaza Kadar Bağlanılabilirlik, Mobil Uygulama ile Kolay Kurulum, Wi-Fi 5 Mesh Sistemi",
+    "combinations": [
+      {
+        "name": "KabelDirekt – Ethernet Kablosu, Ağ Kablosu, LAN – 5m – 0,25-30m arasında mevcuttur (10Gbps, Gigabit Ağlar için Fiber Hızı, RJ45 ile Switch/Router/Modem, siyah/mavi)",
+        "percentage": 7.41
+      },
+      {
+        "name": "Trendline Biftekli Yetişkin Köpek Maması 15 kg",
+        "percentage": 7.41
+      },
+      {
+        "name": "TP-Link Deco E4 3-Pack , AC1200 Mbps, Dual-Band, 10/100Mbps Portları, 100 Cihaza Kadar Bağlanılabilirlik, 370 m²'ye Kadar Kapsama, Mobil Uygulama ile Kolay Kurulum, Wi-Fi 5 Mesh Sistemi",
+        "percentage": 7.41
+      }
+    ]
+  },
+  {
+    "productName": "Tp-Link RE700X AX3000 Mbps Onemesh Wi-Fi 6 Menzil Genişletici",
+    "combinations": [
+      {
+        "name": "Viko Yonca Plus Gri Üçlü Topraklı Priz Çarpma Karşıtı",
+        "percentage": 12
+      },
+      {
+        "name": "Peppa Pig: Yum! Yum! Yum! Sticker Activity Book",
+        "percentage": 4
+      },
+      {
+        "name": "Crocs Classic Unisex Yetişkin Terlik White 37/38 EU",
+        "percentage": 4
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link RE315 AC1200 Mbps Wi-Fi Güçlendirici - 2 Harici Anten, 1 Ethernet Bağlantı Noktası, Hotspot ve Access Point Modu, Tüm Yönlendiriciler ile Uyumlu, Wi-Fi 5 Menzil Genişletici",
+    "combinations": [
+      {
+        "name": "TP-Link Deco BE65 1-pack, BE9300 Mbps, 4 × 2.5 Gbps Portlar, 320 MHz Kanallar, 6 GHz Bandında Çalışır, 200 Cihaza Kadar Bağlanılabilirlik, VPN, WPA3, Üç Bantlı Wi-Fi 7 Mesh Sistemi",
+        "percentage": 8
+      },
+      {
+        "name": "Keenetic PoE+ Switch 5, 1x1Gbit, 4x1Gbit PoE+ Port, IEEE 802.3af/at (max.30W/port), 60Watt",
+        "percentage": 8
+      },
+      {
+        "name": "Yaşam 3.0: Yapay Zeka Çağında İnsan Olmak",
+        "percentage": 4
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link Archer TX10UB Nano | Wi-Fi 6 & Bluetooth 5.3 USB Adaptör | AX900 Mbps | Çift Bant | İkisi Bir Arada | Kolay Kurulum | Windows Uyumlu",
+    "combinations": [
+      {
+        "name": "Razer Ornata V3 - Düşük Profilli Oyun Klavyesi (Hibrit Mecha-Membran Anahtarı, UV Kaplamalı Tuş Başlıkları, Manyetik Yumuşak Dokunuşlu Bilek Desteği, RGB Chroma) TR Düzeni | Siyah",
+        "percentage": 8.33
+      },
+      {
+        "name": "Türkçülüğün Esasları",
+        "percentage": 4.17
+      },
+      {
+        "name": "Dremel GG01 Çok Amaçlı Yüksek Sıcaklık (165°-195°C) Tutkal Çubukları, 7 mm, 12'li",
+        "percentage": 4.17
+      }
+    ]
+  },
+  {
+    "productName": "TP-Link Deco X50(2-pack), AX3000 Tüm Ev Mesh WiFi 6 Sistemi",
+    "combinations": [
+      {
+        "name": "TP-Link Deco X50(1-pack), AX3000 Tüm Ev Mesh WiFi 6 Sistemi",
+        "percentage": 12.5
+      },
+      {
+        "name": "TP-Link Deco X50-PoE 1-pack, AX3000 Mbps, PoE Destekli, Dual-Band, 2,5Gbps Ethernet Portu, 150 Cihaza Kadar Bağlantı, 230 m² 'ye Kadar Kapsama, Mobil Uygulama ile Kolay Kurulum, Wi-Fi 6 Mesh Sistemi",
+        "percentage": 12.5
+      },
+      {
+        "name": "TP-Link TL-SG105, 5-Port 10/100/1000Mbps Gigabit Siwtch",
+        "percentage": 8.33
+      }
+    ]
+  }
+]
+=== TAPO ===
+[]
