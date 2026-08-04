@@ -1,13 +1,30 @@
 import { useState } from 'react';
-import { LayoutDashboard, Wifi, Lightbulb, Bell, Search, Menu, X, Settings, LogOut, ChevronDown } from 'lucide-react';
+import { LayoutDashboard, Wifi, Lightbulb, Bell, Search, Menu, X, Settings, LogOut, ChevronDown, Loader2 } from 'lucide-react';
 import { cn } from './lib/utils';
 import { Brand } from './types';
 import DashboardView from './components/DashboardView';
 import { overviewData, tapoData, tplinkData } from './data/mockData';
+import { useAuth } from './context/AuthContext';
+import Login from './components/Login';
+import { signOut } from 'firebase/auth';
+import { auth } from './lib/firebase';
 
 export default function App() {
+  const { currentUser, loading } = useAuth();
   const [activeTab, setActiveTab] = useState<Brand>('Overview');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+        <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
+      </div>
+    );
+  }
+
+  if (!currentUser) {
+    return <Login />;
+  }
 
   const tabs = [
     { id: 'Overview', label: 'Genel Bakış', icon: LayoutDashboard },
@@ -77,7 +94,10 @@ export default function App() {
             <Settings className="w-4 h-4 ml-1 text-slate-500" />
             <span className="font-medium">Ayarlar</span>
           </button>
-          <button className="w-full flex items-center gap-3 px-6 py-2 text-sm transition-colors cursor-pointer text-left text-slate-400 hover:bg-slate-800 hover:text-rose-400">
+          <button 
+            onClick={() => signOut(auth)}
+            className="w-full flex items-center gap-3 px-6 py-2 text-sm transition-colors cursor-pointer text-left text-slate-400 hover:bg-slate-800 hover:text-rose-400"
+          >
             <LogOut className="w-4 h-4 ml-1 text-slate-500" />
             <span className="font-medium">Çıkış Yap</span>
           </button>
