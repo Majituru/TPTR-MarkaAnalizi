@@ -85,6 +85,7 @@ export default function App() {
   const { currentUser, loading } = useAuth();
   const [activeTab, setActiveTab] = useState<Brand>('Overview');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
 
   if (loading) {
     return (
@@ -162,12 +163,8 @@ export default function App() {
           <div className="mt-8 text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2 px-6">
             System
           </div>
-          <button className="w-full flex items-center gap-3 px-6 py-2 text-sm transition-colors cursor-pointer text-left text-slate-400 hover:bg-slate-800 hover:text-slate-200">
-            <Settings className="w-4 h-4 ml-1 text-slate-500" />
-            <span className="font-medium">Settings</span>
-          </button>
           <button 
-            onClick={() => signOut(auth)}
+            onClick={() => setShowLogoutConfirm(true)}
             className="w-full flex items-center gap-3 px-6 py-2 text-sm transition-colors cursor-pointer text-left text-slate-400 hover:bg-slate-800 hover:text-rose-400"
           >
             <LogOut className="w-4 h-4 ml-1 text-slate-500" />
@@ -206,11 +203,7 @@ export default function App() {
             </div>
           </div>
           
-          <div className="flex gap-3">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded text-[10px] font-bold uppercase tracking-wider hover:bg-blue-700 transition-colors shadow-sm">
-              Download PDF Report
-            </button>
-          </div>
+
         </header>
 
         {/* Dashboard Content */}
@@ -226,13 +219,7 @@ export default function App() {
 
         {/* Status Bar */}
         <footer className="h-10 bg-white border-t border-slate-200 px-6 flex items-center justify-between shrink-0">
-          <div className="flex items-center gap-4 text-[10px] text-slate-400">
-            <span className="flex items-center gap-1.5 font-medium">
-              <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div> 
-              Data Synchronization: Active
-            </span>
-            <span>Last updated: Just now</span>
-          </div>
+          <div></div>
           <div className="text-[10px] text-slate-400 font-mono">
             SYSTEM_ID: 9942-EN-GLOBAL
           </div>
@@ -240,6 +227,38 @@ export default function App() {
 
       </main>
 
+      {showLogoutConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
+          <div className="bg-slate-800 border border-slate-700 rounded-xl shadow-2xl max-w-sm w-full p-6 animate-in fade-in zoom-in duration-200">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 rounded-full bg-rose-500/20 text-rose-500 flex items-center justify-center mb-4">
+                <LogOut className="w-6 h-6" />
+              </div>
+              <h2 className="text-xl font-bold text-white mb-2">Çıkış Yap</h2>
+              <p className="text-sm text-slate-400 mb-6">
+                Hesabınızdan çıkış yapmak istediğinize emin misiniz?
+              </p>
+              <div className="flex w-full gap-3">
+                <button 
+                  onClick={() => setShowLogoutConfirm(false)}
+                  className="flex-1 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg text-sm font-medium transition-colors"
+                >
+                  İptal
+                </button>
+                <button 
+                  onClick={() => {
+                    setShowLogoutConfirm(false);
+                    signOut(auth);
+                  }}
+                  className="flex-1 px-4 py-2 bg-rose-500 hover:bg-rose-600 text-white rounded-lg text-sm font-medium transition-colors"
+                >
+                  Çıkış Yap
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
