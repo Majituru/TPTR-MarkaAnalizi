@@ -1,13 +1,81 @@
 import { useState } from 'react';
 import { LayoutDashboard, Wifi, Lightbulb, Bell, Search, Menu, X, Settings, LogOut, ChevronDown, Loader2 } from 'lucide-react';
 import { cn } from './lib/utils';
-import { Brand } from './types';
+import { Brand, BrandData } from './types';
 import DashboardView from './components/DashboardView';
-import { overviewData, tapoData, tplinkData } from './data/mockData';
+import { brandData } from './data/brandData';
 import { useAuth } from './context/AuthContext';
 import Login from './components/Login';
 import { signOut } from 'firebase/auth';
 import { auth } from './lib/firebase';
+
+const combinedStates = brandData['TP-Link'].amazon.topStates.map((state, index) => {
+  return {
+    name: state.name,
+    units: state.units + (brandData['Tapo'].amazon.topStates[index]?.units || 0)
+  };
+});
+
+const overviewData: BrandData = {
+  amazon: {
+    totalUnits: brandData['TP-Link'].amazon.totalUnits + brandData['Tapo'].amazon.totalUnits,
+    glanceViews: brandData['TP-Link'].amazon.glanceViews + brandData['Tapo'].amazon.glanceViews,
+    returns: brandData['TP-Link'].amazon.returns + brandData['Tapo'].amazon.returns,
+    avgConversion: Number(((brandData['TP-Link'].amazon.avgConversion + brandData['Tapo'].amazon.avgConversion) / 2).toFixed(2)),
+    topProductsByUnits: [...brandData['TP-Link'].amazon.topProductsByUnits, ...brandData['Tapo'].amazon.topProductsByUnits].sort((a,b) => b.units - a.units).slice(0, 5),
+    topProductsByViews: [...brandData['TP-Link'].amazon.topProductsByViews, ...brandData['Tapo'].amazon.topProductsByViews].sort((a,b) => b.views - a.views).slice(0, 5),
+    funnel: {
+      impressions: brandData['TP-Link'].amazon.funnel.impressions + brandData['Tapo'].amazon.funnel.impressions,
+      clicks: brandData['TP-Link'].amazon.funnel.clicks + brandData['Tapo'].amazon.funnel.clicks,
+      basketAdds: brandData['TP-Link'].amazon.funnel.basketAdds + brandData['Tapo'].amazon.funnel.basketAdds,
+      purchases: brandData['TP-Link'].amazon.funnel.purchases + brandData['Tapo'].amazon.funnel.purchases,
+    },
+    topStates: combinedStates,
+    timeSeries: {
+      monthlyYoY: brandData['TP-Link'].amazon.timeSeries.monthlyYoY.map((item, i) => ({
+        month: item.month,
+        currentUnits: item.currentUnits + brandData['Tapo'].amazon.timeSeries.monthlyYoY[i].currentUnits,
+        previousUnits: item.previousUnits + brandData['Tapo'].amazon.timeSeries.monthlyYoY[i].previousUnits,
+      })),
+      monthlyGlance: brandData['TP-Link'].amazon.timeSeries.monthlyGlance.map((item, i) => ({
+        month: item.month,
+        glanceViews: item.glanceViews + brandData['Tapo'].amazon.timeSeries.monthlyGlance[i].glanceViews,
+        orderedUnits: item.orderedUnits + brandData['Tapo'].amazon.timeSeries.monthlyGlance[i].orderedUnits,
+      })),
+      weeklyTraffic: brandData['TP-Link'].amazon.timeSeries.weeklyTraffic.map((item, i) => ({
+        week: item.week,
+        glanceViews: item.glanceViews + brandData['Tapo'].amazon.timeSeries.weeklyTraffic[i].glanceViews,
+        conversionRate: Number(((item.conversionRate + brandData['Tapo'].amazon.timeSeries.weeklyTraffic[i].conversionRate) / 2).toFixed(2)),
+      })),
+      weeklyReturns: brandData['TP-Link'].amazon.timeSeries.weeklyReturns.map((item, i) => ({
+        week: item.week,
+        shippedUnits: item.shippedUnits + brandData['Tapo'].amazon.timeSeries.weeklyReturns[i].shippedUnits,
+        returns: item.returns + brandData['Tapo'].amazon.timeSeries.weeklyReturns[i].returns,
+      })),
+    }
+  },
+  website: {
+    totalVisitors: brandData['TP-Link'].website.totalVisitors + brandData['Tapo'].website.totalVisitors,
+    newVisitors: brandData['TP-Link'].website.newVisitors + brandData['Tapo'].website.newVisitors,
+    returningVisitors: brandData['TP-Link'].website.returningVisitors + brandData['Tapo'].website.returningVisitors,
+    totalPages: brandData['TP-Link'].website.totalPages + brandData['Tapo'].website.totalPages,
+    totalChats: brandData['TP-Link'].website.totalChats + brandData['Tapo'].website.totalChats,
+    bounceRate: Number(((brandData['TP-Link'].website.bounceRate + brandData['Tapo'].website.bounceRate) / 2).toFixed(2)),
+    trafficByHour: brandData['TP-Link'].website.trafficByHour.map((item, i) => ({
+      time: item.time,
+      visitors: item.visitors + (brandData['Tapo'].website.trafficByHour[i]?.visitors || 0),
+      newVisitors: item.newVisitors + (brandData['Tapo'].website.trafficByHour[i]?.newVisitors || 0)
+    })),
+    devices: [
+      { name: 'Desktop', value: (brandData['TP-Link'].website.devices.find(d => d.name === 'Desktop')?.value || 0) + (brandData['Tapo'].website.devices.find(d => d.name === 'Desktop')?.value || 0) },
+      { name: 'Mobile', value: (brandData['TP-Link'].website.devices.find(d => d.name === 'Mobile')?.value || 0) + (brandData['Tapo'].website.devices.find(d => d.name === 'Mobile')?.value || 0) }
+    ].filter(d => d.value > 0),
+    sources: [
+      { name: 'Search Engine', value: (brandData['TP-Link'].website.sources.find(d => d.name === 'Search Engine')?.value || 0) + (brandData['Tapo'].website.sources.find(d => d.name === 'Search Engine')?.value || 0) },
+      { name: 'Direct', value: (brandData['TP-Link'].website.sources.find(d => d.name === 'Direct')?.value || 0) + (brandData['Tapo'].website.sources.find(d => d.name === 'Direct')?.value || 0) }
+    ].filter(d => d.value > 0)
+  }
+};
 
 export default function App() {
   const { currentUser, loading } = useAuth();
@@ -27,13 +95,13 @@ export default function App() {
   }
 
   const tabs = [
-    { id: 'Overview', label: 'Genel Bakış', icon: LayoutDashboard },
+    { id: 'Overview', label: 'Overview', icon: LayoutDashboard },
     { id: 'TP-Link', label: 'TP-Link', icon: Wifi },
     { id: 'Tapo', label: 'Tapo', icon: Lightbulb },
   ] as const;
 
-  const currentData = activeTab === 'Overview' ? overviewData : activeTab === 'TP-Link' ? tplinkData : tapoData;
-  const currentColor = activeTab === 'TP-Link' ? '#06b6d4' : activeTab === 'Tapo' ? '#8b5cf6' : '#334155';
+  const currentData = activeTab === 'Overview' ? overviewData : activeTab === 'TP-Link' ? brandData['TP-Link'] : brandData['Tapo'];
+  const currentColor = activeTab === 'TP-Link' ? '#2563eb' : activeTab === 'Tapo' ? '#8b5cf6' : '#334155';
 
   return (
     <div className="h-screen w-full bg-slate-50 flex font-sans text-slate-900 overflow-hidden">
@@ -63,7 +131,7 @@ export default function App() {
 
         <nav className="flex-1 py-4">
           <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2 px-6">
-            Marka Analizi
+            Brand Analytics
           </div>
           {tabs.map((tab) => (
             <button
@@ -88,18 +156,18 @@ export default function App() {
             </button>
           ))}
           <div className="mt-8 text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2 px-6">
-            Sistem
+            System
           </div>
           <button className="w-full flex items-center gap-3 px-6 py-2 text-sm transition-colors cursor-pointer text-left text-slate-400 hover:bg-slate-800 hover:text-slate-200">
             <Settings className="w-4 h-4 ml-1 text-slate-500" />
-            <span className="font-medium">Ayarlar</span>
+            <span className="font-medium">Settings</span>
           </button>
           <button 
             onClick={() => signOut(auth)}
             className="w-full flex items-center gap-3 px-6 py-2 text-sm transition-colors cursor-pointer text-left text-slate-400 hover:bg-slate-800 hover:text-rose-400"
           >
             <LogOut className="w-4 h-4 ml-1 text-slate-500" />
-            <span className="font-medium">Çıkış Yap</span>
+            <span className="font-medium">Sign Out</span>
           </button>
         </nav>
 
@@ -109,7 +177,7 @@ export default function App() {
               A
             </div>
             <div className="text-xs text-left">
-              <p className="text-white font-medium">Ajans User</p>
+              <p className="text-white font-medium">Agency User</p>
               <p className="text-slate-500">Global Strategy</p>
             </div>
           </div>
@@ -129,27 +197,22 @@ export default function App() {
               <Menu className="w-5 h-5" />
             </button>
             <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
-              <span className="uppercase tracking-wider">Periyot:</span>
-              <select className="bg-transparent border-none focus:ring-0 text-slate-900 cursor-pointer text-xs font-bold bg-slate-50 px-2 py-1 rounded">
-                <option>Son 6 Ay</option>
-                <option>Bu Yıl</option>
-                <option>Son 30 Gün</option>
-              </select>
+              <span className="uppercase tracking-wider font-bold">Data Period:</span>
+              <span className="text-slate-900 font-bold bg-slate-100 px-3 py-1.5 rounded text-[11px]">Last 1 Month</span>
             </div>
           </div>
           
           <div className="flex gap-3">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded text-[10px] font-bold uppercase tracking-wider hover:bg-blue-700 transition-colors">
-              PDF Raporu İndir
+            <button className="bg-blue-600 text-white px-4 py-2 rounded text-[10px] font-bold uppercase tracking-wider hover:bg-blue-700 transition-colors shadow-sm">
+              Download PDF Report
             </button>
           </div>
         </header>
 
         {/* Dashboard Content */}
         <div className="flex-1 overflow-auto p-6 bg-slate-50">
-          <div className="max-w-[1200px] mx-auto h-full flex flex-col">
+          <div className="max-w-[1400px] mx-auto h-full flex flex-col">
             <DashboardView 
-              key={activeTab} // Force re-mount on tab change for animations
               data={currentData} 
               brandColor={currentColor}
               brandName={activeTab}
@@ -162,12 +225,12 @@ export default function App() {
           <div className="flex items-center gap-4 text-[10px] text-slate-400">
             <span className="flex items-center gap-1.5 font-medium">
               <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div> 
-              Veri Senkronizasyonu: Aktif
+              Data Synchronization: Active
             </span>
-            <span>Son güncelleme: 12 dk önce</span>
+            <span>Last updated: Just now</span>
           </div>
           <div className="text-[10px] text-slate-400 font-mono">
-            SİSTEM_ID: 9942-TR-GLOBAL
+            SYSTEM_ID: 9942-EN-GLOBAL
           </div>
         </footer>
 
